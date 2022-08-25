@@ -3,11 +3,11 @@
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)*/
 
 
-void CrossPoint(double f1, double f2, double s1, double s2)
+void CrossPoint(double firstB, double firstK, double secondB, double secondK)
 {
-    double x = (s1 - f1) / (f2 - s2);
-    double y = s2 * x + s1;
-    Console.WriteLine($"Coordinates of the cross-point of two lines -> ({x}; {y})");
+    double x = (secondB - firstB) / (firstK - secondK);
+    double y = secondK * x + secondB;
+    Console.WriteLine($"Coordinates of the cross-point of two lines -> ({Math.Round(x, 1)}; {Math.Round(y, 1)})");
 }
 
 Console.Write("Enter number B1: ");
